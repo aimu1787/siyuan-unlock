@@ -23,7 +23,7 @@ jobs:
       - name: Verify official repository
         shell: bash
         run: |
-          if [[ "${GITHUB_REPOSITORY}" != "aimu1787/siyuan-unlock"; then
+          if [[ "${GITHUB_REPOSITORY}" != "aimu1787/siyuan-unlock" ]]; then
             echo "::error::This release workflow can only run in the official repository."
             exit 1
           fi
