@@ -24,11 +24,11 @@ jobs:
           # 获取已经 release 的版本
           releasedVersion=$(wget -qO- -t3 -T30 "https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/latest" | grep "tag_name" | head -n 1 | awk -F ":" '{print $2}' | sed 's/\"//g;s/,//g;s/ //g')
           # 获取最新代码的版本
-          #packageJson=$(wget -qO- -t3 -T30 "https://raw.githubusercontent.com/siyuan-note/siyuan/master/app/package.json")
-          #packageVersion=$(echo "${packageJson}" | grep "version" | head -n 1 | awk -F ":" '{print $2}' | sed 's/\"//g;s/,//g;s/ //g')
+          packageJson=$(wget -qO- -t3 -T30 "https://raw.githubusercontent.com/siyuan-note/siyuan/master/app/package.json")
+          #packageVersion=v$(echo "${packageJson}" | grep "version" | head -n 1 | awk -F ":" '{print $2}' | sed 's/\"//g;s/,//g;s/ //g')
           packageVersion=$(curl -s https://api.github.com/repos/aimu1787/siyuan-unlock/tags | jq -r '.[0].name')
           # 设置输出
-          if [ "${releasedVersion}" = "v${packageVersion}" ]; then
+          if [ "${releasedVersion}" = "${packageVersion}" ]; then
             echo "release_version=0" >> $GITHUB_OUTPUT 
           else
             echo "release_version=v${packageVersion}" >> $GITHUB_OUTPUT 
