@@ -31,7 +31,7 @@ jobs:
           if [ "${releasedVersion}" = "${packageVersion}" ]; then
             echo "release_version=0" >> $GITHUB_OUTPUT 
           else
-            echo "release_version=v${packageVersion}" >> $GITHUB_OUTPUT 
+            echo "release_version=${packageVersion}" >> $GITHUB_OUTPUT 
           fi
 
           packageManager=$(echo "${packageJson}" | grep "packageManager" | head -n 1 | awk -F ":" '{print $2}' | sed 's/\"//g;s/,//g;s/ //g')
