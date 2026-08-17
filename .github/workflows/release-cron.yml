@@ -26,7 +26,7 @@ jobs:
           # 获取最新代码的版本
           packageJson=$(wget -qO- -t3 -T30 "https://raw.githubusercontent.com/siyuan-note/siyuan/master/app/package.json")
           #packageVersion=v$(echo "${packageJson}" | grep "version" | head -n 1 | awk -F ":" '{print $2}' | sed 's/\"//g;s/,//g;s/ //g')
-          packageVersion=$(curl -s https://api.github.com/repos/aimu1787/siyuan-unlock/tags | jq -r '.[0].name')
+          packageVersion=$(curl -s https://api.github.com/repos/siyuan-note/siyuan/tags | jq -r '.[0].name')
           # 设置输出
           if [ "${releasedVersion}" = "${packageVersion}" ]; then
             echo "release_version=0" >> $GITHUB_OUTPUT 
