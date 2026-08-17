@@ -36,8 +36,8 @@ index 1be67f8..b92a259 100644
  const (
 -	githubReleasesURL            = "https://api.github.com/repos/siyuan-note/siyuan/releases?per_page=100"
 -	githubReleaseURLPrefix       = "https://github.com/siyuan-note/siyuan/releases/tag/v"
-+	githubReleasesURL            = "https://api.github.com/repos/appdev/siyuan-unlock/releases?per_page=100"
-+	githubReleaseURLPrefix       = "https://github.com/appdev/siyuan-unlock/releases/tag/v"
++	githubReleasesURL            = "https://api.github.com/repos/aimu1787/siyuan-unlock/releases?per_page=100"
++	githubReleaseURLPrefix       = "https://github.com/aimu1787/siyuan-unlock/releases/tag/v"
  	githubAPIReleaseCacheSeconds = int64(6 * 60 * 60)
  	maxChecksumManifestSize      = int64(1024 * 1024)
  )
@@ -92,7 +92,7 @@ index f1ebd35..2c561f3 100644
 +	if "9.9.9" != release.Version {
 +		t.Fatalf("unexpected stable version: %q", release.Version)
 +	}
-+	const wantURL = "https://github.com/appdev/siyuan-unlock/releases/tag/v9.9.9"
++	const wantURL = "https://github.com/aimu1787/siyuan-unlock/releases/tag/v9.9.9"
 +	if wantURL != release.ReleaseURL {
 +		t.Fatalf("unexpected stable release URL: %q", release.ReleaseURL)
 +	}
