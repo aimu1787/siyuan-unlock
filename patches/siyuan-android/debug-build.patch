@@ -11,16 +11,7 @@ index e0ec580..93c1c43 100644
  apply from: rootProject.file('buildRelease.gradle')
  
  // 1. 配置 App Bundle (.aab) 的基础文件名
-@@ -21,2 +21,2 @@ android {
--   namespace 'org.b3log.siyuan'
-+   namespace 'org.b3log.siyuan.unlock'
-    compileSdk = 36
-@@ -41,11 +41,18 @@ android {
-    defaultConfig {
--       applicationId "org.b3log.siyuan"
-+       applicationId "org.b3log.siyuan.unlock"
-        minSdk = 26
-        targetSdk = 36
+@@ -45,7 +45,14 @@ android {
         versionCode siyuanVersionCode
         versionName siyuanVersionName
     }
