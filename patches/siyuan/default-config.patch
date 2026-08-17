@@ -28,18 +28,3 @@ index 5e3b51fb8f9d2944a2cacef66cdc3bc9bd365c5a..d4f4e00dea010730b557f7c122b624fb
 +		DisplayVIP:   false,
  	}
  }
-diff --git forkSrcPrefix/kernel/conf/appearance.go forkDstPrefix/kernel/conf/appearance.go
-index ebd1002acf907e4afb3524fe5adcf672a850646b..1df2f4761587468cadf8f6d43573836790473f22 100644
---- forkSrcPrefix/kernel/conf/appearance.go
-+++ forkDstPrefix/kernel/conf/appearance.go
-@@ -48,8 +48,8 @@ func NewAppearance() *Appearance {
- 		Icon:                "litheness",
- 		CodeBlockThemeLight: "github",
- 		CodeBlockThemeDark:  "base16/dracula",
--		Lang:                "en",
--		CloseButtonBehavior: 0,
-+		Lang:                "zh_CN",
-+		CloseButtonBehavior: 1,
- 		HideToolbar:         true,
- 		HideStatusBar:       false,
- 		StatusBar:           &util.StatusBar{},
