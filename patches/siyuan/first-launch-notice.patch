@@ -15,7 +15,7 @@ index 0000000..552bb40
 +    isFirstLaunchNoticeEligible,
 +} from "./firstLaunchNoticeState";
 +
-+const RELEASE_URL = "https://github.com/appdev/siyuan-unlock/releases";
++const RELEASE_URL = "https://github.com/aimu1787/siyuan-unlock/releases";
 +
 +const requestNotice = (path: string) => fetchSyncPost(path, {}, undefined, false);
 +
