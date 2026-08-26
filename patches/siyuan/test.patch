@@ -1,0 +1,13 @@
+diff --git a/app/src/protyle/util/editorCommonEvent.ts b/app/src/protyle/util/editorCommonEvent.ts
+index 1234567..abcdefg 100644
+--- a/app/src/protyle/util/editorCommonEvent.ts
++++ b/app/src/protyle/util/editorCommonEvent.ts
+@@ -2028,7 +2028,7 @@ export const dropEvent = (protyle: IProtyle, editorElement: HTMLElement) => {
+                     }
+ 
+                     const getDocParam: IObject = {
+-                        id: protyle.block.id,
++                        id: protyle.block.rootID,
+                         size: window.siyuan.config.editor.dynamicLoadBlocks,
+                     };
+                     if (isEncryptedBox(protyle.notebookId)) {
