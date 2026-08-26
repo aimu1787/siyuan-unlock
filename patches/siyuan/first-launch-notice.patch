@@ -256,12 +256,11 @@ diff --git a/app/src/mobile/index.ts b/app/src/mobile/index.ts
 index ccb004c..5c237ae 100644
 --- a/app/src/mobile/index.ts
 +++ b/app/src/mobile/index.ts
-@@ -56,4 +56,5 @@ import {initTouchDragBridge} from "../util/touchDragBridge";
+@@ -56,3 +56,4 @@ import {initTouchDragBridge} from "../util/touchDragBridge";
  import {appearanceConfigApi} from "../config/tabs/appearanceRuntime";
  import {openByMobile} from "../editor/openLink";
  import {initHarmonyTextSelectionMenu} from "../util/harmonyTextSelectionMenu";
 +import {openFirstLaunchNotice} from "../boot/firstLaunchNotice";
- import {updateMobileTopBarLayout} from "./util/mobileTopBar";
 @@ -214,1 +215,2 @@ class App {
                                  initRightMenu(this);
 +                                await openFirstLaunchNotice();
