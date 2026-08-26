@@ -36,3 +36,11 @@ index e0ec580..93c1c43 100644
  
              minifyEnabled true
              shrinkResources true
+diff --git a/build.gradle b/build.gradle
+index e0ec580..93c1c43 100644
+--- a/build.gradle
++++ b/build.gradle
+@@ -25,3 +25,1 @@ allprojects {
+         // https://developer.aliyun.com/mvn/guide?spm=a2c6h.13651104.0.0.435836a4Lghjtb
+-        maven { url 'https://maven.aliyun.com/repository/google' }
+-        maven { url 'https://maven.aliyun.com/repository/public' }
