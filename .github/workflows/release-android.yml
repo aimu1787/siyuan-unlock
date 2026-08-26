@@ -122,9 +122,11 @@ jobs:
         working-directory: ${{ github.workspace }}/siyuan-note/siyuan-android
         run: |
           chmod 777 ./gradlew
-          ./gradlew :app:assembleRelease
+          ./gradlew :app:assembleRelease -Pmaven.aliyun.disabled=true
         env:
           KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          # Alternative approach: use different repositories
+          GRADLE_OPTS: "-Dorg.gradle.jvmargs=-Xmx2048m"
 
       - uses: joutvhu/get-release@v1
         id: get_current_release
