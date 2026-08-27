@@ -2,12 +2,14 @@ diff --git a/app/src/protyle/util/editorCommonEvent.ts b/app/src/protyle/util/ed
 index 1234567..abcdefg 100644
 --- a/app/src/protyle/util/editorCommonEvent.ts
 +++ b/app/src/protyle/util/editorCommonEvent.ts
-@@ -2028,7 +2028,7 @@ export const dropEvent = (protyle: IProtyle, editorElement: HTMLElement) => {
+@@ -2049,7 +2049,9 @@ export const dropEvent = (protyle: IProtyle, editorElement: HTMLElement) => {
                      }
- 
++                    const docId = protyle?.block?.rootID || protyle?.block?.id || protyle?.block?.parentID || "";
+
                      const getDocParam: IObject = {
 -                        id: protyle.block.id,
-+                        id: protyle.block.rootID,
++                        id: docId,
                          size: window.siyuan.config.editor.dynamicLoadBlocks,
                      };
++                    console.log("DBG getDocParam after doc2Heading:", getDocParam, "protyle.block:", protyle?.block);
                      if (isEncryptedBox(protyle.notebookId)) {
